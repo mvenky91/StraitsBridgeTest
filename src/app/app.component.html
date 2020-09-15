@@ -1,0 +1,13 @@
+<div class="">
+  <div class="" *ngFor="let layout of layouts">
+    <span><strong>{{layout.name}} - RM {{layout.price}}</strong></span>
+    <hr>
+    <span *ngFor="let slot of layout.slots">
+      <span *ngIf="slot.is_wheelchair == 'false'">{{slot.name}} </span>
+      <span *ngIf="slot.is_wheelchair == 'true'"><i class="fa fa-wheelchair"></i></span>
+      <span> </span>
+    </span>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
